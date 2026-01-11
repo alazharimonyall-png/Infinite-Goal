@@ -1,0 +1,19 @@
+{
+  "name": "Python 3 + Web3 Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "ms-python.python",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint"
+  ],
+  "forwardPorts": [3000, 8000],
+  "postCreateCommand": "pip install -r requirements.txt || true && npm install || true",
+  "remoteUser": "vscode",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}"
+}
